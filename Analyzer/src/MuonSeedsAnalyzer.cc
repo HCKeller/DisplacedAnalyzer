@@ -44,7 +44,7 @@
 #include "TEfficiency.h"
 #include "TMath.h"
 #include <memory>
-#include "DisplacedMuonReco/Analyzer/include/MuonEvent.h"
+#include "DisplacedAnalyzer/Analyzer/include/MuonEvent.h"
 
 
 class MuonSeedsAnalyzer : public edm::EDAnalyzer {
@@ -469,7 +469,7 @@ void MuonSeedsAnalyzer::analyze (const edm::Event &event, const edm::EventSetup 
         h1_MuonSeededTracksOutInDisplaced_eta->Fill(trk->eta());
         h1_MuonSeededTracksOutInDisplaced_phi->Fill(trk->phi());
         h1_MuonSeededTracksOutInDisplaced_num->Fill(0);
-        h1_MuonSeededTracksOutInDisplaced_HitPattern_numberOfValidStripLayersWithMonoAndStereo->Fill(trk->hitPattern().numberOfValidStripLayersWithMonoAndStereo());
+        //~ h1_MuonSeededTracksOutInDisplaced_HitPattern_numberOfValidStripLayersWithMonoAndStereo->Fill(trk->hitPattern().numberOfValidStripLayersWithMonoAndStereo());
         //~ h1_MuonSeededTracksOutInDisplaced_HitPattern_stripLayersWithMeasurement->Fill(trk->hitPattern().stripLayersWithMeasurement());
     }
     
